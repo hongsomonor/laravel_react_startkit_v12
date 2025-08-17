@@ -14,7 +14,7 @@ export default function Login() {
 
     const handleGoogleLogin = () => {
         // Redirect to Laravel Google auth endpoint
-        window.location.href = `${process.env.REACT_APP_API_URL || 'http://localhost:8000'}/auth/google`;
+        window.location.href = `${import.meta.env.VITE_APP_URL || 'http://localhost:8000'}/login/auth/google`;
     };
 
     return (
