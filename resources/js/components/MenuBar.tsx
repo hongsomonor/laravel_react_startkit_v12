@@ -1,12 +1,13 @@
 import { Link } from '@inertiajs/react'
-import { Search , Heart , ShoppingCart } from 'lucide-react'
+import { Search , Heart , ShoppingCart , Menu } from 'lucide-react'
 
 const MenuBar = () => {
     return (
         <div className='text-black'>
-            <nav className='w-full px-[250px] py-6 m-auto shadow-md flex justify-between items-center'>
+            <nav className='w-full px-3 sm:px-[100px] lg:px-[100px] py-4 sm:py-6 m-auto shadow-md flex justify-between items-center'>
+                <Menu className='lg:hidden mt-2 cursor-pointer size-[30px]'></Menu>
                 <div className="text-3xl font-extrabold text-gray-800">eCommerce</div>
-                <ul className='flex font-bold text-gray-600 gap-5 text-xl'>
+                <ul className='lg:flex hidden font-bold text-gray-600 gap-5 text-xl'>
                     <li>
                         <Link href='/home'>Home</Link>
                     </li>
@@ -17,7 +18,6 @@ const MenuBar = () => {
                 </ul>
                 <div className='flex'>
                     <div className='p-3 relative'>
-                        {/* <span className=' absolute bg-orange-600 rounded-full text-white font-bold size-[30px] pt-[2px] top-0 right-0 text-center'>0</span> */}
                         <div className='bg-gray-200 transition-all duration-[0.4s] p-3 rounded-full hover:bg-orange-600 hover:text-white cursor-pointer'>
                             <Search></Search>
                         </div>
